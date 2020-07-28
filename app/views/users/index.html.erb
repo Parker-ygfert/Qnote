@@ -1,0 +1,30 @@
+<% if @user.errors.any? %>
+  <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for(@user) do |f| %>
+
+  <div>
+    <%= f.label :email, "信箱" %>
+    <%= f.text_field :email %>
+  </div>  
+
+  <div>
+    <%= f.label :name, "帳號" %>
+    <%= f.text_field :name %>
+  </div>
+  
+  <div>
+    <%= f.label :password, "密碼" %>
+    <%= f.text_field :password %>
+  </div>
+  
+  <div>
+    <%= f.submit "註冊" %>
+  </div>
+
+<% end %>
