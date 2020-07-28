@@ -15,13 +15,10 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:alert] = "帳號建立成功"
-      redirect_to note_path(@user)
+      redirect_to user_notes_path(@user)
     else
       render :index
     end
-  end
-
-  def login
   end
 
 
@@ -39,7 +36,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:email, :name, :password)
+    params.require(:user).permit(:email, :name, :password, :password_confirmation)
   end
   
 end

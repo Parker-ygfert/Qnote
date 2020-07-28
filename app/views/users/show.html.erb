@@ -1,0 +1,9 @@
+<h1>我的筆記</h1>
+
+<%= link_to "新增筆記", new_user_note_path(params[:id]) %>
+
+<ol>
+  <% @notes.each do |note| %>
+  <li><%= note.content %></li>
+  <% end %>
+</ol>

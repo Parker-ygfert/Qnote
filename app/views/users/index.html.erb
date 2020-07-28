@@ -59,6 +59,12 @@
                   <%= f.password_field :password, class: "form-control" %>
                 </div>
               </div>
+              <div class="form-row">
+                <div class="col-12 mb-3">
+                  <%= f.label :password_confirmation, "確認密碼" %>
+                  <%= f.password_field :password_confirmation, class: "form-control" %>
+                </div>
+              </div>
 
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -68,6 +74,7 @@
           </div>
         </div>
       </div>
+    </div>
 
     <!-- 登入 Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -80,7 +87,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <%= form_for(@user) do |f| %>
+            <%= form_for(@user)do |f| %>
               <div class="form-row">
                 <div class="col-12 mb-3">
                   <%= f.label :name, "使用者名稱" %>
