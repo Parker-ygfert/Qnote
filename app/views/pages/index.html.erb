@@ -1,0 +1,50 @@
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5">
+  <a class="navbar-brand" href="#">Qnote</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav text-center ml-auto">
+      <% if user_signed_in? %>
+        <li class="nav-item active">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">帳號<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#singupModal">登出<span class="sr-only">(current)</span></a>
+        </li>
+      <% else %>
+        <li class="nav-item active">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">登入<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#signUpModal">註冊<span class="sr-only">(current)</span></a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
+
+
+
+<!-- 註冊 Modal -->
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signUpModalLabel">註冊新帳號</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        媽我上電視了
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
