@@ -39,7 +39,14 @@
         </button>
       </div>
       <div class="modal-body">
-        媽我上電視了
+        
+        <div id="sign-up-form">
+          <%= yield :sign_up_form %>
+        </div>
+        <div id="sign-up-form-content">
+          <%= yield %>
+        </div>
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -48,3 +55,7 @@
     </div>
   </div>
 </div>
+
+<%= content_for :sign_up_form do %>
+  123
+<% end %>

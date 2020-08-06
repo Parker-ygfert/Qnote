@@ -1,8 +1,8 @@
 class NotesController < ApplicationController
 
-  include NotFound
+  # include NotFound
 
-  before_action :find_user, only: [:index, :show]
+  # before_action :find_user, only: [:index, :show]
 
   def index
     # @notes = Note.where(id: @user[:id])
